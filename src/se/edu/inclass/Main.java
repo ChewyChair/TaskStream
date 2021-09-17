@@ -5,6 +5,7 @@ import se.edu.inclass.task.Deadline;
 import se.edu.inclass.task.Task;
 import se.edu.inclass.task.TaskNameComparator;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
@@ -20,7 +21,11 @@ public class Main {
         printDeadlines(tasksData);
 
         System.out.println("Total number of deadlines: " + countDeadlines(tasksData));
-
+//        printData(tasksData);
+//        printDataWithStreams(tasksData);
+        printDeadlinesUsingStream(tasksData);
+        System.out.println("Total number of deadlines using stream: "
+                + countDeadlinesUsingStream(tasksData));
     }
 
     private static int countDeadlines(ArrayList<Task> tasksData) {
